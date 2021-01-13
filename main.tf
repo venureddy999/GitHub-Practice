@@ -6,12 +6,12 @@ provider "aws" {
 }
 
 resource "aws_vpc" "default" {
-    cidr_block = "10.0.0.0/16"
+    cidr_block = "10.10.0.0/16"
     enable_dns_hostnames = true
     tags = {
         Name = "DevOps-VPC"
 	Owner = "Venu Reddy"
-	Environment = "DevOps"
+	Environment = "DevOps_Lab"
 	    }
 }
 
@@ -19,6 +19,7 @@ resource "aws_internet_gateway" "default" {
     vpc_id = "${aws_vpc.default.id}"
 	tags = {
         Name = "DevOps_VPC_IGW"
+        Environment = "DevOps_Lab"
     }
 }
 
