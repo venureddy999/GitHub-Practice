@@ -33,3 +33,14 @@ resource "aws_subnet" "subnet1-public" {
         Environment = "DevOps_Lab"
     }
 }
+
+resource "aws_subnet" "subnet3-public" {
+    vpc_id = "${aws_vpc.default.id}"
+    cidr_block = "10.10.3.0/24"
+    availability_zone = "us-east-1a"
+
+    tags = {
+        Name = "DevOps_VPC_Subnet-3"
+        Environment = "DevOps_Lab"
+    }
+}
