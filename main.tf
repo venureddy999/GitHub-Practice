@@ -78,6 +78,17 @@ resource "aws_subnet" "subnet5-public" {
     }
 }
 
+resource "aws_subnet" "subnet6-public" {
+    vpc_id = "${aws_vpc.default.id}"
+    cidr_block = "10.10.6.0/24"
+    availability_zone = "us-east-1a"
+
+    tags = {
+        Name = "DevOps_VPC_Subnet-6"
+        Environment = "DevOps_Lab"
+    }
+}
+
 resource "aws_route_table" "terraform-public" {
     vpc_id = "${aws_vpc.default.id}"
     route {
