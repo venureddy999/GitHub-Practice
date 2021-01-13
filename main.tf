@@ -88,3 +88,25 @@ resource "aws_route_table" "terraform-public" {
         Name = "DevOps_VPC_RT"
     }
 }
+
+resource "aws_subnet" "subnet4-public" {
+    vpc_id = "${aws_vpc.default.id}"
+    cidr_block = "10.10.4.0/24"
+    availability_zone = "us-east-1a"
+
+    tags = {
+        Name = "DevOps_VPC_Subnet-4"
+        Environment = "DevOps_Lab"
+    }
+}
+
+resource "aws_subnet" "subnet5-public" {
+    vpc_id = "${aws_vpc.default.id}"
+    cidr_block = "10.10.5.0/24"
+    availability_zone = "us-east-1a"
+
+    tags = {
+        Name = "DevOps_VPC_Subnet-5"
+        Environment = "DevOps_Lab"
+    }
+}
