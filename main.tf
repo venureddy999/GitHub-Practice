@@ -11,5 +11,6 @@ resource "aws_vpc" "default" {
     tags = {
         Name = "DevOps-VPC"
 	Owner = "Venu Reddy"
+	Environment = "DevOps"
 	    }
 }
