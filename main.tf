@@ -14,3 +14,21 @@ resource "aws_vpc" "default" {
 	Environment = "DevOps"
 	    }
 }
+
+resource "aws_internet_gateway" "default" {
+    vpc_id = "${aws_vpc.default.id}"
+	tags = {
+        Name = "DevOps_VPC_IGW"
+    }
+}
+
+resource "aws_subnet" "subnet1-public" {
+    vpc_id = "${aws_vpc.default.id}"
+    cidr_block = "10.10.1.0/24"
+    availability_zone = "us-east-1a"
+
+    tags = {
+        Name = "DevOps_VPC_Subnet-1"
+        Environment = "DevOps_Lab"
+    }
+}
