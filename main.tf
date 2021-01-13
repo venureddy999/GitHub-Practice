@@ -17,7 +17,7 @@ resource "aws_vpc" "default" {
 
 resource "aws_internet_gateway" "default" {
     vpc_id = "${aws_vpc.default.id}"
-	tags = {
+    	tags = {
         Name = "DevOps_VPC_IGW"
         Environment = "DevOps_Lab"
     }
@@ -34,6 +34,7 @@ resource "aws_subnet" "subnet1-public" {
     }
 }
 
+<<<<<<< HEAD
 resource "aws_subnet" "subnet3-public" {
     vpc_id = "${aws_vpc.default.id}"
     cidr_block = "10.10.3.0/24"
@@ -44,3 +45,15 @@ resource "aws_subnet" "subnet3-public" {
         Environment = "DevOps_Lab"
     }
 }
+=======
+resource "aws_subnet" "subnet2-public" {
+    vpc_id = "${aws_vpc.default.id}"
+    cidr_block = "10.10.2.0/24"
+    availability_zone = "us-east-1a"
+
+    tags = {
+        Name = "DevOps_VPC_Subnet-2"
+        Environment = "DevOps_Lab"
+    }
+}
+>>>>>>> 37b4a93795332ba9d394cc1febcbc5515fce4337
