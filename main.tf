@@ -30,6 +30,6 @@ resource "aws_subnet" "subnet1-public" {
 
     tags = {
         Name = "DevOps_VPC_Subnet-1"
-        Environment = "DevOps""
+        Environment = "DevOps_Lab"
     }
 }
