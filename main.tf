@@ -19,6 +19,7 @@ resource "aws_internet_gateway" "default" {
     vpc_id = "${aws_vpc.default.id}"
 	tags = {
         Name = "DevOps_VPC_IGW"
+        Environment = "DevOps"
     }
 }
 
@@ -29,6 +30,6 @@ resource "aws_subnet" "subnet1-public" {
 
     tags = {
         Name = "DevOps_VPC_Subnet-1"
-        Environment = "DevOps_Lab"
+        Environment = "DevOps""
     }
 }
