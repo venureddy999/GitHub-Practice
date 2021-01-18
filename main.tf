@@ -56,61 +56,6 @@ resource "aws_subnet" "subnet3-public" {
     }
 }
 
-resource "aws_subnet" "subnet4-public" {
-    vpc_id = "${aws_vpc.default.id}"
-    cidr_block = "10.10.4.0/24"
-    availability_zone = "us-east-1a"
-
-    tags = {
-        Name = "DevOps_VPC_Subnet-4"
-        Environment = "DevOps_Lab"
-    }
-}
-
-resource "aws_subnet" "subnet5-public" {
-    vpc_id = "${aws_vpc.default.id}"
-    cidr_block = "10.10.5.0/24"
-    availability_zone = "us-east-1a"
-
-    tags = {
-        Name = "DevOps_VPC_Subnet-5"
-        Environment = "DevOps_Lab"
-    }
-}
-
-resource "aws_subnet" "subnet6-public" {
-    vpc_id = "${aws_vpc.default.id}"
-    cidr_block = "10.10.6.0/24"
-    availability_zone = "us-east-1a"
-
-    tags = {
-        Name = "DevOps_VPC_Subnet-6"
-        Environment = "DevOps_Lab"
-    }
-}
-
-resource "aws_subnet" "subnet7-public" {
-    vpc_id = "${aws_vpc.default.id}"
-    cidr_block = "10.10.7.0/24"
-    availability_zone = "us-east-1a"
-
-    tags = {
-        Name = "DevOps_VPC_Subnet-7"
-        Environment = "DevOps_Lab"
-    }
-}
-
-resource "aws_subnet" "subnet8-public" {
-    vpc_id = "${aws_vpc.default.id}"
-    cidr_block = "10.10.8.0/24"
-    availability_zone = "us-east-1a"
-
-    tags = {
-        Name = "DevOps_VPC_Subnet-8"
-        Environment = "DevOps_Lab"
-    }
-}
-
 resource "aws_route_table" "terraform-public" {
     vpc_id = "${aws_vpc.default.id}"
     route {
