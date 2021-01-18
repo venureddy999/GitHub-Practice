@@ -1,4 +1,3 @@
 .terraform/*
 passwords.txt
 .terraform.lock.hcl
-terraform
